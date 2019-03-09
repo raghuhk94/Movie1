@@ -6,9 +6,9 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 public class RecipeDAO {
-	
-	
-	
+
+
+
 	public boolean insert(RecipeDTO dto)
 	{
 		boolean flag=true;
@@ -24,17 +24,17 @@ public class RecipeDAO {
 			System.out.println("Saving..DTO");
 			session.save(dto);
 			trans.commit();
+                        System.out.println("git Test2");
 			System.out.println("DTO saved successfully..");
-			
-		return flag;
-		
-	}
-catch (Exception e) {
-			
+			return flag;
+
+		}
+		catch (Exception e) {
+
 			System.err.println("Exception in saving RecipeDTO");
 			e.printStackTrace();
 		}
 		return flag;
 
-}
+	}
 }
